@@ -16,5 +16,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title:'output Management with html-webpack-plugin'
 		})
-	]
+	],
+	// https://webpack.js.org/configuration/devtool/
+	devtool:'eval-source-map'
 };

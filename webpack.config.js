@@ -9,7 +9,8 @@ module.exports = {
 	},
 	output:{
 		filename:'[name].bundle.js',
-		path:path.resolve(__dirname,'dist')
+		path:path.resolve(__dirname,'dist'),
+		publicPath:'/'// Used by webpack-dev-middleware
 	},
 	plugins:[
 		new CleanWebpackPlugin(['dist']),
@@ -19,7 +20,10 @@ module.exports = {
 	],
 	// https://webpack.js.org/configuration/devtool/
 	devtool:'eval-source-map',
+	/*
+	//use webpack dev server
 	devServer:{
 		contentBase:'./dist'//Serve the file from the /dist/ on localhost:8080
 	}
+	*/
 };

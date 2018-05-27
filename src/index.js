@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import pic from './abb.png';
+import Data from './example.json';
 
 function component(){
 	var element = document.createElement('div');
@@ -14,6 +15,8 @@ function component(){
 	mypic.src = pic;
 
 	element.appendChild(mypic);
+
+	console.log(Data);
 
 	return element;
 }

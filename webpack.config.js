@@ -12,6 +12,14 @@ module.exports = {
 		path:path.resolve(__dirname,'dist'),
 		publicPath:'/'// Used by webpack-dev-middleware
 	},
+	module:{
+		rules:[
+			{
+				test:/\.css$/,
+				use:['style-loader','css-loader']
+			}
+		]
+	},
 	plugins:[
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
